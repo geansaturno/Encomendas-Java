@@ -1,12 +1,44 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-	oi List
-</body>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+
+<table class="table table-striped well well-lg">
+	<thead>
+		<tr>
+			<th>Id <span class="glyphicon glyphicon-option-vertical"></span></th>
+			<th>Nome <span class="glyphicon glyphicon-user"></span></th>
+			<th>Email <span class="glyphicon glyphicon-envelope"></span></th>
+			<th>Telefone <span class="glyphicon glyphicon-phone-alt"></span></th>
+		</tr>
+	</thead>
+	<tbody>
+
+		<c:forEach var="cliente" items="${clientes}">
+			<tr>
+				<td><a href="/Encomena/cliente?logic=show&id=${cliente.id}">${cliente.id}</a></td>
+				<td>${cliente.nome }</td>
+				<td>${cliente.email }</td>
+				<td>${cliente.telefone }</td>
+			</tr>
+		</c:forEach>
+	</tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </html>
