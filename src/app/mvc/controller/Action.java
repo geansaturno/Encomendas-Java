@@ -3,15 +3,14 @@ package app.mvc.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import app.util.PageConfigBean;
+
 public abstract class Action {
 	
-	abstract public void executeLogic(HttpServletRequest req, HttpServletResponse res);
+	protected PageConfigBean pagina;
 	
-	protected void configuracaoPagina(String titulo, String pagina, HttpServletRequest req){
-		
-		req.setAttribute("title", titulo);
-		req.setAttribute("page", pagina);
-		
-	}
+	public abstract void executeLogic(HttpServletRequest req, HttpServletResponse res);
+	
+	public abstract void configuracaoPagina(HttpServletRequest request);
 
 }

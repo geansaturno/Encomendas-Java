@@ -16,16 +16,18 @@ public class ClienteController extends HttpServlet {
 			throws ServletException, IOException {
 
 		String actionRequested = request.getParameter("action");
+		
+		System.out.println(actionRequested);
 
 		if (actionRequested == null)
 			actionRequested = "Lista";
 
 		try {
-			Class<?> classe = Class.forName("app.mvc.controller.clienteLogic." + actionRequested + "ClienteAction");
+			Class<?> classe = Class.forName("app.mvc.controller.cliente." + actionRequested + "ClienteAction");
 			Action action = (Action) classe.newInstance();
 
 			action.executeLogic(request, response);
-			action.configuracaoPagina("Lista de Clientes", "../cliente/list.jsp", request);
+			action.configuracaoPagina(request);
 
 			request.getRequestDispatcher("/WEB-INF/jsp/template.jsp").forward(request, response);
 
