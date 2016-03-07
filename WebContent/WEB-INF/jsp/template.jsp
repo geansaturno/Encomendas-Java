@@ -8,7 +8,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>${title}</title>
+<title>${pageConfig.title}</title>
 
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -21,9 +21,9 @@
 <body>
 	<c:import url="cabecalho.jsp" />
 	<div class="container">
-		<h2>${title}</h2>
+		<h2>${pageConfig.title}</h2>
 
-		<c:import url="${page}" />
+		<c:import url="${pageConfig.body}" />
 	</div>
 	<c:import url="rodape.jsp" />
 </body>
