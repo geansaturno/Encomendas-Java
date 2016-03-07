@@ -12,12 +12,12 @@
 		<div class="collapse navbar-collapse" id="main-navbar">
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown"> Cleintes <span
+					data-toggle="dropdown"> Clientes <span
 						class="glyphicon glyphicon-user"></span> <span class="caret"></span></a>
 					<ul class="dropdown-menu dropdown-menu-right">
 						<li><a href="/cliente"><span
 								class="glyphicon glyphicon-th-list"></span> Lista de Clientes</a></li>
-						<li><a href="/cliente?logic=new"><span
+						<li><a href="cliente?action=Novo"><span
 								class="glyphicon glyphicon-certificate"></span> Novo Cliente</a></li>
 					</ul></li>
 
