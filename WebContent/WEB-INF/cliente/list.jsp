@@ -13,7 +13,7 @@
 
 		<c:forEach var="cliente" items="${clientes}">
 			<tr>
-				<td><a href="/Encomena/cliente?logic=show&id=${cliente.id}">${cliente.id}</a></td>
+				<td><a href="/Encomenda/cliente?action=Mostrar&id=${cliente.id}">${cliente.id}</a></td>
 				<td>${cliente.nome }</td>
 				<td>${cliente.email }</td>
 				<td>${cliente.telefone }</td>
