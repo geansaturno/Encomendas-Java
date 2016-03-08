@@ -16,8 +16,6 @@ public class ClienteController extends HttpServlet {
 			throws ServletException, IOException {
 
 		String actionRequested = request.getParameter("action");
-		
-		System.out.println(actionRequested);
 
 		if (actionRequested == null)
 			actionRequested = "Lista";
