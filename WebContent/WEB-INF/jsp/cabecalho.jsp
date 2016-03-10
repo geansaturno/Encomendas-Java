@@ -8,23 +8,28 @@
 			</button>
 			<a class="navbar-brand" href="/Encomenda">Encomenda-Web</a>
 		</div>
-		
+
 		<div class="collapse navbar-collapse" id="main-navbar">
 			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown"> Clientes <span
-						class="glyphicon glyphicon-user"></span> <span class="caret"></span></a>
+				<li
+					class="dropdown ${pageConfig.activeMenu eq 'cliente' ? 'active': ''}"><a
+					href="#" class="dropdown-toggle" data-toggle="dropdown">
+						Clientes <span class="glyphicon glyphicon-user"></span> <span
+						class="caret"></span>
+				</a>
 					<ul class="dropdown-menu dropdown-menu-right">
-						<li><a href="/cliente"><span
+						<li><a href="/Encomenda/cliente?action=Lista"><span
 								class="glyphicon glyphicon-th-list"></span> Lista de Clientes</a></li>
-						<li><a href="cliente?action=Novo"><span
+						<li><a href="/Encomenda/cliente?action=Novo"><span
 								class="glyphicon glyphicon-certificate"></span> Novo Cliente</a></li>
 					</ul></li>
 
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">Encomendas <span
-						class="glyphicon glyphicon-shopping-cart"></span> <span
-						class="caret"></span></a>
+				<li
+					class="dropdown ${pageConfig.activeMenu eq 'encomenda' ? 'active': ''}"><a
+					href="#" class="dropdown-toggle" data-toggle="dropdown">Encomendas
+						<span class="glyphicon glyphicon-shopping-cart"></span> <span
+						class="caret"></span>
+				</a>
 					<ul class="dropdown-menu dropdown-menu-right">
 						<li><a href="/encomenda"><span
 								class="glyphicon glyphicon-th-list"></span> Lista de Encomenda</a></li>
@@ -32,9 +37,12 @@
 								class="glyphicon glyphicon-certificate"></span> Nova Encomenda</a></li>
 					</ul></li>
 
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">Produtos <span
-						class="glyphicon glyphicon-barcode"> <span class="caret"></span></span></a>
+				<li
+					class="dropdown ${pageConfig.activeMenu eq 'produto' ? 'active': ''}"><a
+					href="#" class="dropdown-toggle" data-toggle="dropdown">Produtos
+						<span class="glyphicon glyphicon-barcode"> <span
+							class="caret"></span></span>
+				</a>
 					<ul class="dropdown-menu dropdown-menu-right">
 						<li><a href="/produto"><span
 								class="glyphicon glyphicon-th-list"></span> Lista de Produto</a></li>

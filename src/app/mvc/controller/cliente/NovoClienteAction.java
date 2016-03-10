@@ -15,8 +15,8 @@ public class NovoClienteAction extends Action{
 	}
 
 	@Override
-	public void configuracaoPagina(HttpServletRequest request) {
-		request.setAttribute("pageConfig", new PageConfigBean("../cliente/new.jsp", "Novo Cliente"));
+	public void configuracaoPagina(HttpServletRequest request, PageConfigBean pageConfig) {
+		request.setAttribute("pageConfig", new PageConfigBean("../cliente/new.jsp", "Novo Cliente", "cliente"));
 	}
 
 }

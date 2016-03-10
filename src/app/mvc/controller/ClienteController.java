@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import app.util.PageConfigBean;
+
 @WebServlet(urlPatterns = { "/", "/cliente" })
 public class ClienteController extends HttpServlet {
 
@@ -25,7 +27,11 @@ public class ClienteController extends HttpServlet {
 			Action action = (Action) classe.newInstance();
 
 			action.executeLogic(request, response);
-			action.configuracaoPagina(request);
+			
+			PageConfigBean pg = new PageConfigBean();
+			pg.setActiveMenu("cliente");
+			
+			action.configuracaoPagina(request, pg);
 
 			request.getRequestDispatcher("/WEB-INF/jsp/template.jsp").forward(request, response);
 

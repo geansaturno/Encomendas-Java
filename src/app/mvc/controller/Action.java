@@ -11,6 +11,6 @@ public abstract class Action {
 	
 	public abstract void executeLogic(HttpServletRequest req, HttpServletResponse res);
 	
-	public abstract void configuracaoPagina(HttpServletRequest request);
+	public abstract void configuracaoPagina(HttpServletRequest request, PageConfigBean pageConfig);
 
 }

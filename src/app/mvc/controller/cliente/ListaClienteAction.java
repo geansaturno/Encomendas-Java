@@ -15,7 +15,10 @@ public class ListaClienteAction extends Action {
 	}
 
 	@Override
-	public void configuracaoPagina(HttpServletRequest request) {
-		request.setAttribute("pageConfig", new PageConfigBean("../cliente/list.jsp","Lista de Clientes"));
+	public void configuracaoPagina(HttpServletRequest request, PageConfigBean pageConfig) {
+		pageConfig.setBody("../cliente/list.jsp");
+		pageConfig.setTitle("Lista de Clientes");
+		
+		request.setAttribute("pageConfig", pageConfig);
 	}
 }

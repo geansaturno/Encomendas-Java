@@ -1,5 +1,8 @@
 package app.mvc.controller.cliente;
 
+import java.io.IOException;
+
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -19,16 +22,26 @@ public class SaveClienteAction extends Action {
 	@Override
 	public void executeLogic(HttpServletRequest req, HttpServletResponse res) {
 		
+		Cliente cliente = clienteFactory(req);
+		
+		req.setAttribute("cliente", cliente);
+		
 		new ClienteDAO().add(clienteFactory(req));
 		
-		proximaAcao.executeLogic(req, res);
-
 	}
 
 	@Override
-	public void configuracaoPagina(HttpServletRequest request) {
-		proximaAcao.configuracaoPagina(request);
-		request.setAttribute("alert", "Novo Cliente adicionado com Sucesso");
+	public void configuracaoPagina(HttpServletRequest request , PageConfigBean pageConfig) {
+		
+		Cliente cliente = (Cliente) request.getAttribute("cliente");
+		
+		pageConfig.setBody("../cliente/save.jsp");
+		pageConfig.setTitle(cliente.getNome() + " Salvo");
+		
+		//proximaAcao.configuracaoPagina(request, pageConfig);
+		
+		//request.setAttribute("alert", "Novo Cliente adicionado com Sucesso");
+		request.setAttribute("pageConfig", pageConfig);
 
 	}
 	
