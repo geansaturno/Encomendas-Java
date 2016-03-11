@@ -22,7 +22,6 @@
 	<c:import url="cabecalho.jsp" />
 	<div class="container">
 		<h2>${pageConfig.title}</h2>
-
 		<c:import url="${pageConfig.body}" />
 	</div>
 	<c:import url="rodape.jsp" />

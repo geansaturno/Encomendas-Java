@@ -37,7 +37,7 @@
 </div>
 
 <div class="btn-group btn-control">
-	<a href="/Encomenda/cliente?action=Alterar?id=${cliente.id}"
+	<a href="/Encomenda/cliente?action=Alterar&id=${cliente.id}"
 		class="btn btn-primary">Alterar</a> <a
 		href="/Encomenda/cliente?action=Deletar" class="btn btn-primary">Deletar</a>
 </div>
